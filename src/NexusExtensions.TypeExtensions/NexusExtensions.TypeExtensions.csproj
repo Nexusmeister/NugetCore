@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<LangVersion>latest</LangVersion>
+		<DisableImplicitNamespaceImports>true</DisableImplicitNamespaceImports>
+		<Nullable>enable</Nullable>
+
+		<Authors>Robin Kaltenbach</Authors>
+		<Company>RKSoftware</Company>
+		<Description>Extenssions for built-in and types and classes in the .NET SDK</Description>
+		<RepositoryUrl>https://github.com/nexusmeister/nugetcore</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>extensions</PackageTags>
+		<PackageProjectUrl>https://github.com/nexusmeister/nugetcore</PackageProjectUrl>
+		<Copyright>Robin Kaltenbach 2022</Copyright>
+		<PackageIcon>logo.png</PackageIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="images\logo.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
+</Project>

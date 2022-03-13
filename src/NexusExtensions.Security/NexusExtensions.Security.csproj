@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<DisableImplicitNamespaceImports>true</DisableImplicitNamespaceImports>
+
+		<Authors>Robin Kaltenbach</Authors>
+		<Company>RKSoftware</Company>
+		<Description>Security Extensions</Description>
+		<RepositoryUrl>https://github.com/nexusmeister/nugetcore</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>encryption, security</PackageTags>
+		<PackageProjectUrl>https://github.com/nexusmeister/nugetcore</PackageProjectUrl>
+		<Copyright>Robin Kaltenbach 2022</Copyright>
+		<PackageIcon>logo.png</PackageIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="images\logo.png" Pack="true" PackagePath="\"/>
+	</ItemGroup>
+</Project>
