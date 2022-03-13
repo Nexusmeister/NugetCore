@@ -31,11 +31,11 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Pack
-      run: dotnet pack -c Release -p:PackageVersion=${{ steps.date.outputs.date }}
+      run: dotnet pack -c Release -p:PackageVersion=${{ steps.date.outputs.date }} -o out
       
     - name: Add private GitHub registry to NuGet
       run: nuget sources add -name "NexusNugets" -Source https://nuget.pkg.github.com/Nexusmeister/index.json -Username Nexusmeister -Password ${{ secrets.GITHUB_TOKEN }}
         
     - name: Push generated package to GitHub registry
-      run: nuget push .\SOLUTION_FOLDER\PROJECT_FOLDER\out\*.nupkg -Source "NexusNugets" -SkipDuplicate
+      run: nuget push .\src\NexusExtensions.TypeExtensions\out\*.nupkg -Source "NexusNugets" -SkipDuplicate
 
