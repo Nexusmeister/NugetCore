@@ -37,5 +37,5 @@ jobs:
       run: nuget sources add -name "NexusNugets" -Source https://nuget.pkg.github.com/Nexusmeister/index.json -Username Nexusmeister -Password ${{ secrets.GITHUB_TOKEN }}
         
     - name: Push generated package to GitHub registry
-      run: nuget push ./src/NexusExtensions.TypeExtensions/out/*.nupkg -Source "NexusNugets" -SkipDuplicate
+      run: nuget push ./out/*.nupkg -Source "NexusNugets" -SkipDuplicate
 
