@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace RK.Extensions.Security.Encryption
+namespace NexusExtensions.Security.Encryption
 {
     public sealed class Decrypter : EncryptionBase
     {

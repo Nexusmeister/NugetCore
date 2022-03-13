@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace RK.Extensions.TypeExtensions
+namespace NexusExtensions.TypeExtensions
 {
     /// <summary>
     /// Extensions for <seealso cref="IEnumerable{T}"/> Collections

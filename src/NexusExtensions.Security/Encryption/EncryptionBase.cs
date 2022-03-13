@@ -4,7 +4,7 @@ using Org.BouncyCastle.Crypto.Modes;
 using Org.BouncyCastle.Crypto.Paddings;
 using Org.BouncyCastle.Crypto.Parameters;
 
-namespace RK.Extensions.Security.Encryption
+namespace NexusExtensions.Security.Encryption
 {
     public class EncryptionBase
     {
@@ -12,6 +12,7 @@ namespace RK.Extensions.Security.Encryption
 
         // This const should be editable for clients, to customize their encryption
         protected static string PassPhrase = DefaultPassPhrase;
+
         /// <summary>
         /// This constant is used to determine the keysize of the encryption algorithm in bits.
         /// We divide this by 8 within the code below to get the equivalent number of bytes.
