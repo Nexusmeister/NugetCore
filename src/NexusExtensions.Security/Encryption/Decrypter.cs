@@ -17,7 +17,7 @@ namespace NexusExtensions.Security.Encryption
             // Get the actual cipher text bytes by removing the first 64 bytes from the cipherText string.
             var cipherTextBytes = cipherTextBytesWithSaltAndIv.Skip((Keysize / 8) * 2).Take(cipherTextBytesWithSaltAndIv.Length - ((Keysize / 8) * 2)).ToArray();
 
-            using var password = new Rfc2898DeriveBytes(PassPhrase, saltStringBytes, DerivationIterations);
+            using var password = new Rfc2898DeriveBytes(PassPhrase, saltStringBytes, DerivationIterations, HashAlgorithmName.SHA256);
             var (cipher, parametersWithIv) = CreateEncryptionLayer(password, ivStringBytes);
 
             cipher.Init(false, parametersWithIv);
