@@ -12,7 +12,7 @@ namespace NexusExtensions.Security.Encryption
             var saltStringBytes = Generate256BitsOfRandomEntropy();
             var ivStringBytes = Generate256BitsOfRandomEntropy();
             var plainTextBytes = Encoding.UTF8.GetBytes(plainText);
-            using var password = new Rfc2898DeriveBytes(PassPhrase, saltStringBytes, DerivationIterations);
+            using var password = new Rfc2898DeriveBytes(PassPhrase, saltStringBytes, DerivationIterations, HashAlgorithmName.SHA256);
 
             var (cipher, keyParamWithIv) = CreateEncryptionLayer(password, ivStringBytes);
            
